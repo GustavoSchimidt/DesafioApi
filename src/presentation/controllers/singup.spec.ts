@@ -1,4 +1,4 @@
-import { InvalidParamError } from '../errors/invalidParamError copy'
+import { InvalidParamError } from '../errors/invalidParamError'
 import { MissingParamError } from '../errors/missingParamError'
 import { ServerError } from '../errors/serverError'
 import { EmailValidator } from '../protocols/emailValidator'
