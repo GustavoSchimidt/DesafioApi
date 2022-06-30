@@ -1,3 +1,4 @@
+import { MissingParamsError } from '../errors/missingParamsError'
 import { SingUpController } from './singup'
 
 describe('SingUp Controller ', () => {
@@ -12,7 +13,7 @@ describe('SingUp Controller ', () => {
     }
     const httpResponse = sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toEqual(new Error('Missing params: name'))
+    expect(httpResponse.body).toEqual(new MissingParamsError('name'))
   })
 
   test('Should return 400 if no email is provided', () => {
@@ -26,6 +27,6 @@ describe('SingUp Controller ', () => {
     }
     const httpResponse = sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toEqual(new Error('Missing params: email'))
+    expect(httpResponse.body).toEqual(new MissingParamsError('email'))
   })
 })
