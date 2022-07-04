@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --passWithNoTests  ",
+    "test:verbose": "jest --passWithNoTests --runInBand",
+    "test:unit": "npm test -- --watch"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +15,7 @@
     "@types/jest": "^28.1.3",
     "@types/node": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@types/validator": "^13.7.3",
     "eslint": "^7.32.0",
     "eslint-config-standard-with-typescript": "^21.0.1",
     "eslint-plugin-import": "^2.26.0",
@@ -24,5 +27,8 @@
     "ts-node": "^10.8.1",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "validator": "^13.7.0"
   }
 }
